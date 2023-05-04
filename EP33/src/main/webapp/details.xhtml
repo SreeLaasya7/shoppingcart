@@ -1,0 +1,32 @@
+<HTML xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<HEAD>
+<STYLE type="text/css">
+body {background-color: powderblue;}
+H3   {color: blue;}
+</STYLE>
+<TITLE>JSF Data</TITLE>
+</HEAD>
+<BODY>
+<H3>Details</H3>
+<h:form>
+<h:dataTable value="#{infodata.list}" var="row">
+<h:column>
+<f:facet name="header">Name</f:facet>
+#{row.name}
+</h:column>
+<h:column>
+<f:facet name="header">Address</f:facet>
+#{row.address}
+</h:column>
+<h:column>
+<f:facet name="header">Contact number</f:facet>
+#{row.phoneno}
+</h:column>
+<h:column>
+<f:facet name="header">Specialised in</f:facet>
+#{row.productname}
+</h:column>
+</h:dataTable>
+</h:form>
+</BODY>
+</HTML>
